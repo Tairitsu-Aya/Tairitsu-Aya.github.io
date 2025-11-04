@@ -147,3 +147,20 @@ html[data-theme='dark'] .site-nav a:hover{ background:#1a1e2b; }
 html[data-theme='dark'] .theme-toggle{ background:#151824; border-color:#272a3d; color:#e6e6e6; }
 html[data-theme='dark'] .highlight,
 html[data-theme='dark'] .post-content pre{ background:#0b0b10; border-color:#2a2a3a; }
+
+/* === Overrides: fixed side gutters & sticky footer (zoom-safe) === */
+body{
+  padding-inline: clamp(16px, 4vw, 48px); /* always keep left/right whitespace */
+  min-height: 100vh;
+  min-height: 100svh; /* modern mobile viewport unit */
+}
+/* Keep content centered within a readable max width */
+.container{
+  max-width: var(--maxw);
+  width: 100%;
+  margin-inline: auto;
+  /* remove earlier width math if any */
+}
+
+/* Ensure footer stays at the bottom on short pages */
+.site-footer{ margin-top: auto; }
