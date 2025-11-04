@@ -6,6 +6,6 @@
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#g)"/>
-  <text x="60" y="340" font-size="72" font-family="SimSun, Songti SC, serif" fill="#6a4fb0">帕秋莉的小图书馆</text>
-  <text x="60" y="420" font-size="32" font-family="Times New Roman, serif" fill="#1a1a1a">占位封面 · Replace me</text>
+  <text x="60" y="340" font-size="72" font-family="system-ui, -apple-system, Segoe UI, Arial, sans-serif" fill="#6a4fb0">帕秋莉的小图书馆</text>
+  <text x="60" y="420" font-size="32" font-family="system-ui, -apple-system, Segoe UI, Arial, sans-serif" fill="#1a1a1a">占位封面 · Replace me</text>
 </svg>

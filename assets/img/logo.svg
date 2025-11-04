@@ -6,5 +6,5 @@
     </linearGradient>
   </defs>
   <rect width="256" height="64" rx="16" fill="url(#g)"/>
-  <text x="32" y="40" font-size="24" font-family="Times New Roman, serif" fill="#1a1a1a">Patchouli Library</text>
+  <text x="32" y="40" font-size="24" font-family="system-ui, -apple-system, Segoe UI, Arial, sans-serif" fill="#1a1a1a">Patchouli Library</text>
 </svg>

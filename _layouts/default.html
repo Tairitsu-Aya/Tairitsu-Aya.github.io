@@ -3,6 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      (function() {
+        try {
+          var key = 'pl-theme';
+          var saved = localStorage.getItem(key);
+          var use = saved ? saved : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', use);
+        } catch(e){}
+      })();
+    </script>
     <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.subtitle }}">
     <link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
@@ -14,10 +24,24 @@
     {%- endif %}
 
     <!-- KaTeX for math -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8RvQ5fD9oY8hQp4nKgi0rZ5O+S8mU8b6t5tgqv9s7rWvQ4wFdJwJXjS5k6L/6LE" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-y6xZ5mIqkV/3K6h4qV2rwOeWcZ0Xv1uG+3ZcgkH1p5g0K2Sx6sW1dH2l1Yo0xQ2w" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-mll67dPik/0lI4i9q1eY0r3kQ3f1yF2h5jzI1CkJ9xwz8P2m8l3YHhJz5bq3Xf2/" crossorigin="anonymous"
-      onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true}]});"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (window.renderMathInElement) {
+          renderMathInElement(document.body, {
+            delimiters: [
+              {left: "$$", right: "$$", display: true},
+              {left: "$",  right: "$",  display: false},
+              {left: "\\(", right: "\\)", display: false},
+              {left: "\\[", right: "\\]", display: true}
+            ],
+            ignoredTags: ["script","noscript","style","textarea","pre","code"]
+          });
+        }
+      });
+    </script>
 
     <!-- Plausible Analytics -->
     {%- if site.theme_vars.enable_plausible and site.theme_vars.plausible_domain -%}

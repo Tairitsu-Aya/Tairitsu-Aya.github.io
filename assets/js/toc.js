@@ -1,26 +1,22 @@
 document.addEventListener('DOMContentLoaded', function(){
-  const toc = document.querySelector('#toc .toc-list');
-  if(!toc) return;
-
-  // Collect headings in post content
+  const tocEl = document.querySelector('#toc .toc-list');
+  if(!tocEl) return;
   const content = document.querySelector('.post-content');
-  if(!content) return;
+  if(!content) { document.getElementById('toc').style.display='none'; return; }
 
   const headings = content.querySelectorAll('h1, h2, h3');
   if(headings.length === 0) { document.getElementById('toc').style.display='none'; return; }
 
   let lastLevel = 0;
-  const stack = [toc];
+  const stack = [tocEl];
 
   headings.forEach(h => {
     const level = parseInt(h.tagName.substring(1), 10);
 
-    // Ensure an id for anchor
     if(!h.id){
       h.id = h.textContent.trim().toLowerCase().replace(/\s+/g,'-').replace(/[^\w\-]/g,'');
     }
 
-    // Adjust list nesting
     if(level > lastLevel){
       const ol = document.createElement('ol');
       stack[stack.length-1].appendChild(ol);

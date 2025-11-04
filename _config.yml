@@ -3,11 +3,9 @@ subtitle: "七曜魔法使驻人里使馆，森罗万象收集册"
 lang: "zh-CN"
 timezone: "Asia/Shanghai"
 
-# GitHub Pages production URL
 url: "https://Tairitsu-Aya.github.io"
 baseurl: ""
 
-# Build settings
 markdown: kramdown
 highlighter: rouge
 kramdown:
@@ -19,13 +17,11 @@ kramdown:
 
 permalink: /:categories/:year/:month/:day/:title/
 
-# Plugins supported by GitHub Pages
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# Defaults
 defaults:
   - scope:
       path: ""
@@ -35,21 +31,19 @@ defaults:
       comments: true
       toc: true
 
-# Theme options
 theme_vars:
-  enable_subscribe: true           # 一键开关订阅入口（页眉/页脚的订阅按钮）
-  enable_toc: true                 # 全站开启目录（单篇可用 toc:false 关闭）
-  enable_giscus: true             # 开关评论（单篇可用 comments:false 关闭）
+  enable_subscribe: true
+  enable_toc: true
+  enable_giscus: true
   enable_plausible: true
   plausible_domain: "tairitsu-aya.github.io"
-  primary_color: "#c8b6ff"         # 淡紫
+  primary_color: "#c8b6ff"
   primary_soft: "#e9ddff"
   accent_yellow: "#ffd95a"
   text_color: "#1a1a1a"
   bg_color: "#ffffff"
   max_width: "900px"
 
-# Giscus（需在 _includes/giscus.html 中填入 repo_id/category_id 等，占位在这里）
 giscus:
   repo: "Tairitsu-Aya/Tairitsu-Aya.github.io"
   repo_id: "REPO_ID_PLACEHOLDER"
@@ -63,7 +57,6 @@ giscus:
   lang: "zh-CN"
   crossorigin: "anonymous"
 
-# Navigation (labels shown in中文，链接路径尽量使用英文slug)
 navigation:
   - name: "主页"
     url: "/"
@@ -78,18 +71,16 @@ navigation:
   - name: "联系我"
     url: "/contact/"
 
-# Socials
 socials:
   github: "https://github.com/Tairitsu-Aya"
   bilibili: "https://space.bilibili.com/37408192?spm_id_from=333.1007.0.0"
 
-# Exclusions
+logo: "/assets/img/logo.svg"
+image: "/assets/img/og-default.svg"
+header_image: "/assets/img/cover-default.svg"
+
 exclude:
   - README.md
   - node_modules
   - package.json
   - package-lock.json
-
-logo: "/assets/img/logo.svg"
-image: "/assets/img/og-default.svg"
-header_image: "/assets/img/cover-default.svg"

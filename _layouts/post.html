@@ -12,10 +12,11 @@ layout: default
   {%- endif -%}
 
   {% assign header_img = page.header_image | default: site.header_image %}
-{% if header_img %}
-  <figure class="post-cover"><img src="{{ header_img | relative_url }}" alt="{{ page.title }}"></figure>
-{% endif %}
-<div class="post-content">
+  {% if header_img %}
+    <figure class="post-cover"><img src="{{ header_img | relative_url }}" alt="{{ page.title }}"></figure>
+  {% endif %}
+
+  <div class="post-content">
     {{ content }}
   </div>
 

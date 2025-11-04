@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <rect width="1200" height="630" fill="#c8b6ff"/>
-  <text x="60" y="340" font-size="72" font-family="Times New Roman, serif" fill="#000">Patchouli Library</text>
-  <text x="60" y="420" font-size="32" font-family="SimSun, Songti SC, serif" fill="#000">Open Graph 占位图</text>
+  <text x="60" y="340" font-size="72" font-family="system-ui, -apple-system, Segoe UI, Arial, sans-serif" fill="#000">Patchouli Library</text>
+  <text x="60" y="420" font-size="32" font-family="system-ui, -apple-system, Segoe UI, Arial, sans-serif" fill="#000">Open Graph 占位图</text>
 </svg>
