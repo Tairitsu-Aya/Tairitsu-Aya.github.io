@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f6f0ff"/>
+      <stop offset="1" stop-color="#fff7cc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <text x="60" y="340" font-size="72" font-family="SimSun, Songti SC, serif" fill="#6a4fb0">帕秋莉的小图书馆</text>
+  <text x="60" y="420" font-size="32" font-family="Times New Roman, serif" fill="#1a1a1a">占位封面 · Replace me</text>
+</svg>

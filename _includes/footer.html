@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="left">
+      <small>© {{ site.time | date: "%Y" }} {{ site.title }} · 保留所有权利</small>
+      <small> · <a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a> {% if site.theme_vars.enable_subscribe %}· <a href="{{ '/feed.xml' | relative_url }}">RSS</a>{% endif %}</small>
+    </div>
+    <div class="right">
+      <a href="{{ site.socials.github }}" target="_blank" rel="noopener">GitHub</a>
+      <a href="{{ site.socials.bilibili }}" target="_blank" rel="noopener">Bilibili</a>
+    </div>
+  </div>
+</footer>

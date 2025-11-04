@@ -1,0 +1,19 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      {% if site.logo %}<img class="brand-logo" src="{{ site.logo | relative_url }}" alt="{{ site.title }} logo">{% else %}<span class="brand-mark">✦</span>{% endif %}
+      {{ site.title }}
+    </a>
+    <nav class="site-nav" aria-label="主导航">
+      <button class="nav-toggle" aria-label="切换菜单" onclick="document.documentElement.classList.toggle('nav-open')">☰</button>
+      <ul>
+        {%- for item in site.navigation -%}
+          <li><a href="{{ item.url | relative_url }}">{{ item.name }}</a></li>
+        {%- endfor -%}
+        {%- if site.theme_vars.enable_subscribe -%}
+          <li><a href="{{ '/feed.xml' | relative_url }}">订阅</a></li>
+        {%- endif -%}
+      </ul>
+    </nav>
+  </div>
+</header>
