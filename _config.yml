@@ -46,9 +46,9 @@ theme_vars:
 
 giscus:
   repo: "Tairitsu-Aya/Tairitsu-Aya.github.io"
-  repo_id: "REPO_ID_PLACEHOLDER"
+  repo_id: "R_kgDOQPD7Aw"
   category: "General"
-  category_id: "CATEGORY_ID_PLACEHOLDER"
+  category_id: "DIC_kwDOQPD7A84Cxd9B"
   mapping: "pathname"
   reactions_enabled: "1"
   emit_metadata: "0"
